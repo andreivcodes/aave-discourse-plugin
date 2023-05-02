@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-# name: discourse-plugin-name
-# about: TODO
+# name: aave-discourse-plugin
+# about: Senate Discourse plugin for Aave
 # version: 0.0.1
-# authors: Discourse
-# url: TODO
+# authors: Senate
+# url: https://senatelabs.xyz
 # required_version: 2.7.0
 
 enabled_site_setting :plugin_name_enabled
