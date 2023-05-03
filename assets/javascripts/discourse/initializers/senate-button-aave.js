@@ -4,15 +4,11 @@ import { iconNode } from "discourse-common/lib/icon-library";
 
 function createTooltipButton(helper) {
   let icon = iconNode("envelope");
-  let isVisible = false;
 
   return helper.h("div", {}, [
     helper.h(
       "button.senate-aave-btn",
       {
-        onclick: () => {
-          isVisible = !isVisible;
-        },
         style: {
           height: "34px",
           width: "249px",
@@ -29,11 +25,6 @@ function createTooltipButton(helper) {
         { style: { display: "flex", alignItems: "center", gap: "0.5em" } },
         [icon, "Setup Proposal Notifications"]
       )
-    ),
-    helper.h(
-      "div.senate-aave-tooltip",
-      { style: { display: isVisible ? "block" : "none" } },
-      [h("p", "This is a test tooltip")]
     ),
   ]);
 }
