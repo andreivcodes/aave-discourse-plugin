@@ -95,8 +95,8 @@ export default createWidget("senate-aave", {
                   "div.input-row",
                   {
                     style: {
-                      display: "flex-row",
-                      alignItems: "center",
+                      display: "flex",
+                      alignItems: "top",
                       justifyContent: "center",
                     },
                   },
