@@ -19,8 +19,9 @@ export default createWidget("senate-aave", {
       {
         style: {
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          maxWidth: "1090px",
+          margin: "0 auto",
+          justifyContent: "end",
         },
       },
       [
@@ -39,7 +40,7 @@ export default createWidget("senate-aave", {
               border: "1px solid #333333",
               cursor: "pointer",
               padding: "0.5em 1em",
-              margin: "1em",
+              margin: "0.5em 0",
             },
           },
           h(
@@ -61,7 +62,7 @@ export default createWidget("senate-aave", {
                   fontSize: "14px",
                   color: "#333",
                   whiteSpace: "nowrap",
-                  marginTop: "65px",
+                  marginTop: "35px",
                 },
               },
               "This is a test tooltip"
