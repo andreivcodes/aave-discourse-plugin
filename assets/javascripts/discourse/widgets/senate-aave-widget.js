@@ -6,7 +6,7 @@ export default createWidget("senate-aave", {
   tagName: "div.senate-aave",
 
   defaultState() {
-    return { tooltipVisible: false };
+    return { tooltipVisible: false, buttonEnabled: false, tooltipState: 0 };
   },
 
   buildKey: () => "senate-aave",
@@ -49,7 +49,7 @@ export default createWidget("senate-aave", {
             [icon, `Setup Proposal Notifications`]
           )
         ),
-        state.tooltipVisible
+        state.tooltipVisible && state.tooltipState == 0
           ? h(
               "div.tooltip",
               {
@@ -105,10 +105,15 @@ export default createWidget("senate-aave", {
                       type: "email",
                       placeholder: "voter@aave.com",
                       style: {
-                        height: "46px",
+                        height: "44px",
                         width: "60%",
                         background: "#D9D9D9",
+                        color: "#000000",
                         border: "1px solid #000",
+                      },
+                      oninput: (event) => {
+                        state.buttonEnabled = event.target.value !== "";
+                        this.scheduleRerender();
                       },
                     }),
                     h(
@@ -116,17 +121,78 @@ export default createWidget("senate-aave", {
                       {
                         type: "button",
                         style: {
-                          opacity: "33%",
-                          height: "46px",
-                          background: "#333333",
-                          color: "#fff",
-                          border: "none",
+                          opacity: state.buttonEnabled ? "100%" : "33%",
+                          height: "44px",
+                          background: "#FFFFFF",
+                          color: "#333333",
+                          border: "1px solid #333333",
+                          borderStyle: "solid solid solid none",
                           cursor: "pointer",
+                        },
+                        onclick: () => {
+                          state.tooltipState = 1;
+                          this.scheduleRerender();
                         },
                       },
                       "Subscribe"
                     ),
                   ]
+                ),
+              ]
+            )
+          : null,
+        state.tooltipVisible && state.tooltipState == 1
+          ? h(
+              "div.tooltip",
+              {
+                style: {
+                  maxWidth: "350px",
+                  position: "absolute",
+                  background:
+                    "linear-gradient(53.9deg, rgba(48, 186, 198, 0.25) -0.34%, rgba(182, 80, 158, 0.25) 90.27%), #273248",
+                  padding: "20px",
+                  borderRadius: "8px",
+                  fontSize: "14px",
+                  color: "#fff",
+                  marginTop: "55px",
+                  boxShadow: "0px 3px 8px rgba(0, 0, 0, 0.33)",
+                  zIndex: "10",
+                  textAlign: "center",
+                },
+              },
+              [
+                h(
+                  "h3",
+                  {
+                    style: {
+                      fontWeight: "700",
+                      fontSize: "87px",
+                      margin: "0 0 10px",
+                    },
+                  },
+                  "🙏"
+                ),
+                h(
+                  "h3",
+                  {
+                    style: {
+                      fontWeight: "700",
+                      fontSize: "28px",
+                      margin: "0 0 10px",
+                    },
+                  },
+                  "Thank you!"
+                ),
+                h(
+                  "p",
+                  {
+                    style: {
+                      fontWeight: "400",
+                      fontSize: "16px",
+                      margin: "0 0 10px",
+                    },
+                  },
+                  "Please click on the link we just sent to your email to confirm your subscription to Aave Proposals Notifications"
                 ),
               ]
             )
