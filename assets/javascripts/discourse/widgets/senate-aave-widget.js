@@ -54,18 +54,20 @@ export default createWidget("senate-aave", {
               "div.tooltip",
               {
                 style: {
-                  maxWidth: "350px",
+                  maxWidth: "380px",
                   position: "absolute",
                   background:
                     "linear-gradient(53.9deg, rgba(48, 186, 198, 0.25) -0.34%, rgba(182, 80, 158, 0.25) 90.27%), #273248",
-                  padding: "20px",
-                  borderRadius: "8px",
+                  padding: "36px",
+                  borderRadius: "16px",
                   fontSize: "14px",
                   color: "#fff",
                   marginTop: "55px",
                   boxShadow: "0px 3px 8px rgba(0, 0, 0, 0.33)",
                   zIndex: "10",
                   textAlign: "center",
+                  display: "flex-row",
+                  alignItems: "center",
                 },
               },
               [
@@ -75,7 +77,7 @@ export default createWidget("senate-aave", {
                     style: {
                       fontWeight: "700",
                       fontSize: "28px",
-                      margin: "0 0 10px",
+                      margin: "0 0 35px",
                     },
                   },
                   "Subscribe to Aave Proposal Notifications"
@@ -86,7 +88,7 @@ export default createWidget("senate-aave", {
                     style: {
                       fontWeight: "400",
                       fontSize: "16px",
-                      margin: "0 0 10px",
+                      margin: "0 0 35px",
                     },
                   },
                   "Get an email to be notified of off-chain and on-chain Aave proposals that you can vote on."
@@ -106,7 +108,7 @@ export default createWidget("senate-aave", {
                       placeholder: "voter@aave.com",
                       style: {
                         height: "44px",
-                        width: "60%",
+                        width: "100%",
                         background: "#D9D9D9",
                         color: "#000000",
                         border: "1px solid #000",
@@ -148,7 +150,7 @@ export default createWidget("senate-aave", {
                     position: "absolute",
                     left: "50%",
                     transform: "rotate(90deg)",
-                    marginTop: "-230px",
+                    marginTop: "-294px",
                   },
                 }),
               ]
@@ -159,18 +161,20 @@ export default createWidget("senate-aave", {
               "div.tooltip",
               {
                 style: {
-                  maxWidth: "350px",
+                  maxWidth: "380px",
                   position: "absolute",
                   background:
                     "linear-gradient(53.9deg, rgba(48, 186, 198, 0.25) -0.34%, rgba(182, 80, 158, 0.25) 90.27%), #273248",
-                  padding: "20px",
-                  borderRadius: "8px",
+                  padding: "36px",
+                  borderRadius: "16px",
                   fontSize: "14px",
                   color: "#fff",
                   marginTop: "55px",
                   boxShadow: "0px 3px 8px rgba(0, 0, 0, 0.33)",
                   zIndex: "10",
                   textAlign: "center",
+                  display: "flex-row",
+                  alignItems: "center",
                 },
               },
               [
@@ -180,7 +184,7 @@ export default createWidget("senate-aave", {
                     style: {
                       fontWeight: "700",
                       fontSize: "87px",
-                      margin: "0 0 10px",
+                      margin: "0 0 25px",
                     },
                   },
                   "🙏"
@@ -191,7 +195,7 @@ export default createWidget("senate-aave", {
                     style: {
                       fontWeight: "700",
                       fontSize: "28px",
-                      margin: "0 0 10px",
+                      margin: "0 0 25px",
                     },
                   },
                   "Thank you!"
@@ -202,7 +206,7 @@ export default createWidget("senate-aave", {
                     style: {
                       fontWeight: "400",
                       fontSize: "16px",
-                      margin: "0 0 10px",
+                      margin: "0 0 25px",
                     },
                   },
                   "Please click on the link we just sent to your email to confirm your subscription to Aave Proposals Notifications"
@@ -217,7 +221,7 @@ export default createWidget("senate-aave", {
                     position: "absolute",
                     left: "50%",
                     transform: "rotate(90deg)",
-                    marginTop: "-291px",
+                    marginTop: "-351px",
                   },
                 }),
               ]
