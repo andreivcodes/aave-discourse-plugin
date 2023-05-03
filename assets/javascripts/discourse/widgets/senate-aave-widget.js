@@ -138,6 +138,19 @@ export default createWidget("senate-aave", {
                     ),
                   ]
                 ),
+                h("div.tooltip-tail", {
+                  style: {
+                    width: "0",
+                    height: "0",
+                    borderTop: "10px solid transparent",
+                    borderBottom: "10px solid transparent",
+                    borderRight: "10px solid rgba(68, 66, 96, 1)",
+                    position: "absolute",
+                    left: "50%",
+                    transform: "rotate(90deg)",
+                    marginTop: "-230px",
+                  },
+                }),
               ]
             )
           : null,
@@ -194,6 +207,19 @@ export default createWidget("senate-aave", {
                   },
                   "Please click on the link we just sent to your email to confirm your subscription to Aave Proposals Notifications"
                 ),
+                h("div.tooltip-tail", {
+                  style: {
+                    width: "0",
+                    height: "0",
+                    borderTop: "10px solid transparent",
+                    borderBottom: "10px solid transparent",
+                    borderRight: "10px solid rgba(68, 66, 96, 1)",
+                    position: "absolute",
+                    left: "50%",
+                    transform: "rotate(90deg)",
+                    marginTop: "-291px",
+                  },
+                }),
               ]
             )
           : null,
