@@ -6,10 +6,38 @@ export default createWidget("senate-aave", {
   tagName: "div.senate-aave",
 
   defaultState() {
-    return { tooltipVisible: false, buttonEnabled: false, tooltipState: 0 };
+    return {
+      tooltipVisible: false,
+      buttonEnabled: false,
+      tooltipState: 0,
+      email: "",
+    };
   },
 
   buildKey: () => "senate-aave",
+
+  async createAaveUser(email) {
+    try {
+      const response = await fetch(`/senate-aave/create-senate-user`, {
+        method: "POST",
+        body: JSON.stringify({ email }),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      });
+      console.log(response);
+
+      if (response.status == 200) {
+        this.state.tooltipState = 1;
+        this.scheduleRerender();
+      } else {
+        throw new Error("API call failed");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  },
 
   html(attrs, state) {
     let icon = iconNode("envelope");
@@ -115,6 +143,7 @@ export default createWidget("senate-aave", {
                       },
                       oninput: (event) => {
                         state.buttonEnabled = event.target.value !== "";
+                        state.email = event.target.value;
                         this.scheduleRerender();
                       },
                     }),
@@ -132,8 +161,7 @@ export default createWidget("senate-aave", {
                           cursor: "pointer",
                         },
                         onclick: () => {
-                          state.tooltipState = 1;
-                          this.scheduleRerender();
+                          this.createAaveUser(state.email);
                         },
                       },
                       "Subscribe"
