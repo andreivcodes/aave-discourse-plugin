@@ -8,20 +8,20 @@ function createTooltipButton(helper) {
 
   return helper.h("div", {}, [
     helper.h(
-      "button.tooltip-btn",
+      "button.senate-aave-btn",
       {
         onclick: () => {
           isVisible = !isVisible;
         },
         style: {
-          height: "32px",
-          width: "256px",
-          color: "#E9337A",
-          background: "#FFE9F1",
-          border: "1px solid #F2ACC7",
-          borderRadius: "16px",
+          height: "34px",
+          width: "249px",
+          color: "#00000",
+          background: "#333333",
+          border: "1px solid #333333",
           cursor: "pointer",
           padding: "0.5em 1em",
+          margin: "1em",
         },
       },
       helper.h(
@@ -31,28 +31,21 @@ function createTooltipButton(helper) {
       )
     ),
     helper.h(
-      "div.tooltip-content",
+      "div.senate-aave-tooltip",
       { style: { display: isVisible ? "block" : "none" } },
       [h("p", "This is a test tooltip")]
     ),
   ]);
-
-  function render() {
-    const container = document.querySelector(".tooltip-btn-container");
-    if (container) {
-      helper.mount(container, createTooltipButton(helper));
-    }
-  }
 }
 
 export default {
-  name: "discourse-tooltip-button",
+  name: "senate-plugin-aave",
 
   initialize() {
     withPluginApi("0.8.20", (api) => {
       api.decorateWidget("header-buttons:before", (helper) => {
         if (api.getCurrentUser()) {
-          return helper.h("div.tooltip-btn-container", [
+          return helper.h("div.senate-aave-container", [
             createTooltipButton(helper),
           ]);
         }
