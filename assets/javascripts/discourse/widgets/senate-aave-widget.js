@@ -180,7 +180,7 @@ export default createWidget("senate-aave", {
                     position: "absolute",
                     left: "50%",
                     transform: "rotate(90deg)",
-                    marginTop: "-297px",
+                    marginTop: "-296px",
                   },
                 }),
               ]
@@ -251,7 +251,7 @@ export default createWidget("senate-aave", {
                     position: "absolute",
                     left: "50%",
                     transform: "rotate(90deg)",
-                    marginTop: "-354px",
+                    marginTop: "-352px",
                   },
                 }),
               ]
@@ -322,7 +322,7 @@ export default createWidget("senate-aave", {
                     position: "absolute",
                     left: "50%",
                     transform: "rotate(90deg)",
-                    marginTop: "-332px",
+                    marginTop: "-330px",
                   },
                 }),
               ]
