@@ -1,4 +1,4 @@
 plugins:
-  plugin_enabled:
+  aave_senate_plugin:
     default: true
     client: true
