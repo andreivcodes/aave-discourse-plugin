@@ -79,7 +79,14 @@ export default createWidget("senate-aave", {
           },
           h(
             "div",
-            { style: { display: "flex", alignItems: "center", gap: "0.5em" } },
+            {
+              style: {
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5em",
+                color: "#00000",
+              },
+            },
             [icon, `Setup Proposal Notifications`]
           )
         ),
