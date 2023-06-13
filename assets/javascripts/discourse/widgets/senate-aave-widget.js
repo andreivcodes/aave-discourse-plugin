@@ -98,8 +98,8 @@ export default createWidget("senate-aave", {
                   position: "absolute",
                   background:
                     "linear-gradient(53.9deg, rgba(48, 186, 198, 0.25) -0.34%, rgba(182, 80, 158, 0.25) 90.27%), #273248",
-                  padding: "36px",
-                  borderRadius: "16px",
+                  padding: "6px",
+                  borderRadius: "20px",
                   fontSize: "14px",
                   color: "#fff",
                   marginTop: "55px",
@@ -111,6 +111,19 @@ export default createWidget("senate-aave", {
                 },
               },
               [
+                h("h3", {
+                  style: {
+                    width: "32px",
+                    height: "32px",
+                    backgroundImage:
+                      "url(\"data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='white' fill-opacity='0.2'/%3E%3Ccircle cx='16' cy='16' r='15.5' stroke='white' stroke-opacity='0.4'/%3E%3Cpath d='M22.2574 11.0502L20.8432 9.63599L15.8933 14.5858L10.9435 9.636L9.5293 11.0502L14.4791 16L9.52945 20.9497L10.9437 22.3639L15.8933 17.4142L20.843 22.3639L22.2572 20.9497L17.3075 16L22.2574 11.0502Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E\")",
+                  },
+                  onclick: () => {
+                    state.tooltipVisible = false;
+                    state.tooltipState == 0;
+                    this.scheduleRerender();
+                  },
+                }),
                 h(
                   "h3",
                   {
@@ -118,6 +131,7 @@ export default createWidget("senate-aave", {
                       fontWeight: "700",
                       fontSize: "28px",
                       margin: "0 0 35px",
+                      padding: "0px 24px",
                     },
                   },
                   "Subscribe to Aave Proposal Notifications"
@@ -129,6 +143,7 @@ export default createWidget("senate-aave", {
                       fontWeight: "400",
                       fontSize: "16px",
                       margin: "0 0 35px",
+                      padding: "0px 24px",
                     },
                   },
                   "Get an email to be notified of off-chain and on-chain Aave proposals that you can vote on."
@@ -140,6 +155,8 @@ export default createWidget("senate-aave", {
                       display: "flex",
                       alignItems: "top",
                       justifyContent: "center",
+                      padding: "0px 24px",
+                      paddingBottom: "14px",
                     },
                   },
                   [
@@ -190,7 +207,7 @@ export default createWidget("senate-aave", {
                     position: "absolute",
                     left: "50%",
                     transform: "rotate(90deg)",
-                    marginTop: "-296px",
+                    marginTop: "-318px",
                   },
                 }),
               ]
@@ -205,8 +222,8 @@ export default createWidget("senate-aave", {
                   position: "absolute",
                   background:
                     "linear-gradient(53.9deg, rgba(48, 186, 198, 0.25) -0.34%, rgba(182, 80, 158, 0.25) 90.27%), #273248",
-                  padding: "36px",
-                  borderRadius: "16px",
+                  padding: "6px",
+                  borderRadius: "20px",
                   fontSize: "14px",
                   color: "#fff",
                   marginTop: "55px",
@@ -218,6 +235,19 @@ export default createWidget("senate-aave", {
                 },
               },
               [
+                h("h3", {
+                  style: {
+                    width: "32px",
+                    height: "32px",
+                    backgroundImage:
+                      "url(\"data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='white' fill-opacity='0.2'/%3E%3Ccircle cx='16' cy='16' r='15.5' stroke='white' stroke-opacity='0.4'/%3E%3Cpath d='M22.2574 11.0502L20.8432 9.63599L15.8933 14.5858L10.9435 9.636L9.5293 11.0502L14.4791 16L9.52945 20.9497L10.9437 22.3639L15.8933 17.4142L20.843 22.3639L22.2572 20.9497L17.3075 16L22.2574 11.0502Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E\")",
+                  },
+                  onclick: () => {
+                    state.tooltipVisible = false;
+                    state.tooltipState == 0;
+                    this.scheduleRerender();
+                  },
+                }),
                 h(
                   "h3",
                   {
@@ -225,6 +255,7 @@ export default createWidget("senate-aave", {
                       fontWeight: "700",
                       fontSize: "87px",
                       margin: "0 0 25px",
+                      padding: "0px 24px",
                     },
                   },
                   "🙏"
@@ -236,6 +267,7 @@ export default createWidget("senate-aave", {
                       fontWeight: "700",
                       fontSize: "28px",
                       margin: "0 0 25px",
+                      padding: "0px 24px",
                     },
                   },
                   "Thank you!"
@@ -247,6 +279,7 @@ export default createWidget("senate-aave", {
                       fontWeight: "400",
                       fontSize: "16px",
                       margin: "0 0 25px",
+                      padding: "0px 24px",
                     },
                   },
                   "Please click on the link we just sent to your email to confirm your subscription to Aave Proposals Notifications"
@@ -261,7 +294,7 @@ export default createWidget("senate-aave", {
                     position: "absolute",
                     left: "50%",
                     transform: "rotate(90deg)",
-                    marginTop: "-352px",
+                    marginTop: "-362px",
                   },
                 }),
               ]
@@ -276,8 +309,8 @@ export default createWidget("senate-aave", {
                   position: "absolute",
                   background:
                     "linear-gradient(53.9deg, rgba(48, 186, 198, 0.25) -0.34%, rgba(182, 80, 158, 0.25) 90.27%), #273248",
-                  padding: "36px",
-                  borderRadius: "16px",
+                  padding: "6px",
+                  borderRadius: "20px",
                   fontSize: "14px",
                   color: "#fff",
                   marginTop: "55px",
@@ -289,6 +322,19 @@ export default createWidget("senate-aave", {
                 },
               },
               [
+                h("h3", {
+                  style: {
+                    width: "32px",
+                    height: "32px",
+                    backgroundImage:
+                      "url(\"data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='white' fill-opacity='0.2'/%3E%3Ccircle cx='16' cy='16' r='15.5' stroke='white' stroke-opacity='0.4'/%3E%3Cpath d='M22.2574 11.0502L20.8432 9.63599L15.8933 14.5858L10.9435 9.636L9.5293 11.0502L14.4791 16L9.52945 20.9497L10.9437 22.3639L15.8933 17.4142L20.843 22.3639L22.2572 20.9497L17.3075 16L22.2574 11.0502Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E\")",
+                  },
+                  onclick: () => {
+                    state.tooltipVisible = false;
+                    state.tooltipState == 0;
+                    this.scheduleRerender();
+                  },
+                }),
                 h(
                   "h3",
                   {
@@ -296,6 +342,7 @@ export default createWidget("senate-aave", {
                       fontWeight: "700",
                       fontSize: "87px",
                       margin: "0 0 25px",
+                      padding: "0px 24px",
                     },
                   },
                   "😰"
@@ -307,6 +354,7 @@ export default createWidget("senate-aave", {
                       fontWeight: "700",
                       fontSize: "28px",
                       margin: "0 0 25px",
+                      padding: "0px 24px",
                     },
                   },
                   "Oops"
@@ -318,6 +366,7 @@ export default createWidget("senate-aave", {
                       fontWeight: "400",
                       fontSize: "16px",
                       margin: "0 0 25px",
+                      padding: "0px 24px",
                     },
                   },
                   "Something went wrong and we couldn't create a new user for you. Please try again later."
@@ -332,7 +381,7 @@ export default createWidget("senate-aave", {
                     position: "absolute",
                     left: "50%",
                     transform: "rotate(90deg)",
-                    marginTop: "-330px",
+                    marginTop: "-340px",
                   },
                 }),
               ]
@@ -347,8 +396,8 @@ export default createWidget("senate-aave", {
                   position: "absolute",
                   background:
                     "linear-gradient(53.9deg, rgba(48, 186, 198, 0.25) -0.34%, rgba(182, 80, 158, 0.25) 90.27%), #273248",
-                  padding: "36px",
-                  borderRadius: "16px",
+                  padding: "6px",
+                  borderRadius: "20px",
                   fontSize: "14px",
                   color: "#fff",
                   marginTop: "55px",
@@ -360,6 +409,19 @@ export default createWidget("senate-aave", {
                 },
               },
               [
+                h("h3", {
+                  style: {
+                    width: "32px",
+                    height: "32px",
+                    backgroundImage:
+                      "url(\"data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='16' fill='white' fill-opacity='0.2'/%3E%3Ccircle cx='16' cy='16' r='15.5' stroke='white' stroke-opacity='0.4'/%3E%3Cpath d='M22.2574 11.0502L20.8432 9.63599L15.8933 14.5858L10.9435 9.636L9.5293 11.0502L14.4791 16L9.52945 20.9497L10.9437 22.3639L15.8933 17.4142L20.843 22.3639L22.2572 20.9497L17.3075 16L22.2574 11.0502Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E\")",
+                  },
+                  onclick: () => {
+                    state.tooltipVisible = false;
+                    state.tooltipState == 0;
+                    this.scheduleRerender();
+                  },
+                }),
                 h(
                   "h3",
                   {
@@ -403,7 +465,7 @@ export default createWidget("senate-aave", {
                     position: "absolute",
                     left: "50%",
                     transform: "rotate(90deg)",
-                    marginTop: "-330px",
+                    marginTop: "-340px",
                   },
                 }),
               ]
