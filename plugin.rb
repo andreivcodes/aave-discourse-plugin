@@ -21,7 +21,7 @@ after_initialize do
       
       def proxy
         email = params[:email]
-        uri = URI.parse("https://dev.senatelabs.xyz/api/aave-magic-user")
+        uri = URI.parse("https://staging.senatelabs.xyz/api/aave-magic-user")
         
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = true
